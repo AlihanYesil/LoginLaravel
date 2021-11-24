@@ -28,3 +28,7 @@ route::prefix('/')->middleware('isAdmin')->group(function(){
     Route::get('GetMessage',[genelController::class,'index'])->name('index');
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
